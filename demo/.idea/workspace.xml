@@ -2,136 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cb96fcd-241c-43e2-869f-c362c6c88767" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../$RECYCLE.BIN/S-1-5-21-3756716003-1547154914-973266244-1001/$RVSXYRJ/demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CODEGYM/.idea/CODEGYM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product_manager/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/11_mvc/excercise/product_manager/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.idea/user_manger.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build/classes/java/main/manager_user/controller/UserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build/classes/java/main/manager_user/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build/classes/java/main/manager_user/repository/BaseRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build/classes/java/main/manager_user/repository/IUserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build/classes/java/main/manager_user/repository/Impl/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build/classes/java/main/manager_user/service/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build/classes/java/main/manager_user/service/Impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build/libs/user-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/java/manager_user/controller/UserServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/java/manager_user/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/java/manager_user/repository/BaseRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/java/manager_user/repository/IUserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/java/manager_user/repository/Impl/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/java/manager_user/service/IUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/java/manager_user/service/Impl/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/webapp/user/create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/webapp/user/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/excercise/user_manger/src/main/webapp/user/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build/classes/java/main/manager_user/controller/UserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build/classes/java/main/manager_user/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build/classes/java/main/manager_user/repository/BaseRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build/classes/java/main/manager_user/repository/IUserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build/classes/java/main/manager_user/repository/Impl/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build/classes/java/main/manager_user/service/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build/classes/java/main/manager_user/service/Impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build/libs/user-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/java/manager_user/controller/UserServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/java/manager_user/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/java/manager_user/repository/BaseRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/java/manager_user/repository/IUserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/java/manager_user/repository/impl/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/java/manager_user/service/IUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/java/manager_user/service/impl/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/webapp/user/create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/webapp/user/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/12_JDBC-mySQL/practice/user/src/main/webapp/user/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/13_JDBC_transaction/excercise/user/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/manager_user/controller/UserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/manager_user/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/manager_user/repository/BaseRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/manager_user/repository/IUserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/manager_user/repository/Impl/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/manager_user/service/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/manager_user/service/Impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/user/create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/user/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module3/apache-tomcat-9.0.65/webapps/ROOT/user/list.jsp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/java/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/java/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/java/convert_money/controller/Money.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/java/convert_money/controller/Money2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/webapp/WEB-INF/views/money.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/practice/create_mvc/src/main/java/com/codegym/controller/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/practice/create_mvc/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/practice/create_mvc/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/practice/create_mvc/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="2DElKpm9pY3k2jHC9pPZWF4SPac" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -152,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -169,6 +55,8 @@
       <updated>1660272063467</updated>
       <workItem from="1660272064714" duration="80000" />
       <workItem from="1660272204112" duration="544000" />
+      <workItem from="1660294312617" duration="48000" />
+      <workItem from="1660515819947" duration="443000" />
     </task>
     <servers />
   </component>
@@ -184,10 +72,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1660272109521" />
-    <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1660272693133">
+    <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1660516269103">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1660272693133" />
+    <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1660516269103" />
     <state x="65" y="0" key="new project wizard" timestamp="1660272750081">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
