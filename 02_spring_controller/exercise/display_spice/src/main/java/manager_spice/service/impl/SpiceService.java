@@ -12,7 +12,6 @@ public class SpiceService implements ISpiceService {
     @Autowired
     private ISpiceRepository iSpiceRepository;
 
-
     @Override
     public List<String> chooseSpiceSandwich() {
         return iSpiceRepository.chooseSpiceSandwich();

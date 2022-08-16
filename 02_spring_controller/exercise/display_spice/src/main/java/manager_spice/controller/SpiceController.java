@@ -13,7 +13,7 @@ import java.util.List;
 @Controller
 public class SpiceController {
     @Autowired
-    ISpiceService iSpiceService;
+    private ISpiceService iSpiceService;
 
     @GetMapping("/")
     public String chooseSpice(Model model) {
