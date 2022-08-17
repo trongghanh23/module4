@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8cb96fcd-241c-43e2-869f-c362c6c88767" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/java/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/java/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/java/convert_money/controller/Money.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/java/convert_money/controller/Money2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money/src/main/webapp/WEB-INF/views/money.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/practice/create_mvc/src/main/java/com/codegym/controller/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/practice/create_mvc/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/practice/create_mvc/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_overview_spring_mvc/practice/create_mvc/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03_data_binding_form/practice/upload_file/src/main/java/com/codegym/configs/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03_data_binding_form/practice/upload_file/src/main/java/com/codegym/configs/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03_data_binding_form/practice/upload_file/src/main/resources/upload_file.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../01_overview_spring_mvc/exercise/convert_money" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -57,11 +65,23 @@
       <workItem from="1660272204112" duration="544000" />
       <workItem from="1660294312617" duration="48000" />
       <workItem from="1660515819947" duration="443000" />
+      <workItem from="1660699043545" duration="86000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="163" y="0" key="#Project_Structure" timestamp="1660272135220">
@@ -72,13 +92,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1660272109521" />
-    <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1660516269103">
+    <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1660699115625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1660516269103" />
-    <state x="65" y="0" key="new project wizard" timestamp="1660272750081">
+    <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1660699115625" />
+    <state x="65" y="0" key="new project wizard" timestamp="1660699126593">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1660272750081" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1660699126593" />
   </component>
 </project>
