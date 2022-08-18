@@ -53,21 +53,22 @@ public class MedicalController {
 
     @GetMapping("/edit")
     public String editMedical(@RequestParam String idCard, Model model) {
-        model.addAttribute("HealthDeclaration", iMedicalService.selectByIdCard(idCard));
 
-        model.addAttribute("birthday", iMedicalService.birthday());
+        model.addAttribute("HealthDeclaration",this.iMedicalService.selectByIdCard(idCard));
 
-        model.addAttribute("gender", iMedicalService.gender());
+        model.addAttribute("birthday",this.iMedicalService.birthday());
 
-        model.addAttribute("country", iMedicalService.country());
+        model.addAttribute("gender", this.iMedicalService.gender());
 
-        model.addAttribute("day", iMedicalService.day());
+        model.addAttribute("country", this.iMedicalService.country());
 
-        model.addAttribute("month", iMedicalService.month());
+        model.addAttribute("day", this.iMedicalService.day());
 
-        model.addAttribute("year", iMedicalService.year());
+        model.addAttribute("month", this.iMedicalService.month());
 
-        model.addAttribute("vehicle", iMedicalService.vehicle());
+        model.addAttribute("year", this.iMedicalService.year());
+
+        model.addAttribute("vehicle", this.iMedicalService.vehicle());
 
         return ("/edit");
 

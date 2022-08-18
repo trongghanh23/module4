@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h3>View Product</h3>
+
+<div id="detail">
+    <div class="cusdetail">
+        <label>Name:</label>
+        <label th:text="${product.name}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Price:</label>
+        <label th:text="${product.price}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>describe:</label>
+        <label th:text="${product.describe}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>producer:</label>
+        <label th:text="${product.producer}"></label>
+    </div>
+</div>
+
+
+</body>
+</html>
