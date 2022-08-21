@@ -16,7 +16,7 @@ public class ProductController {
     private IProductService iProductService;
 
     @GetMapping("")
-    public String listProduct(Model model,String name) {
+    public String listProduct(Model model, String name) {
         List<Product> productList = iProductService.findAll(name);
         model.addAttribute("productList", productList);
         return "list";

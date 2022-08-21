@@ -1,64 +1,68 @@
 package app_listen_music.model;
 
-import org.hibernate.annotations.Table;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name="music")
+@Table
 public class Music {
     @Id
-    @GeneratedValue( strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private String nameMusic;
-    private String artist;
-    private String kindMusic;
-    private String file;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(name = "song_name")
+    private String name;
+    private String singer;
+    @Column(name = "song_type")
+    private String songType;
+    private String link;
 
     public Music() {
     }
 
-    public Music(String nameMusic, String artist, String kindMusic, String file) {
-        this.nameMusic = nameMusic;
-        this.artist = artist;
-        this.kindMusic = kindMusic;
-        this.file = file;
+    public Music(int id, String name, String singer, String songType, String link) {
+        this.id = id;
+        this.name = name;
+        this.singer = singer;
+        this.songType = songType;
+        this.link = link;
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
+    public int getId() {
+        return id;
     }
 
-    public String getNameMusic() {
-        return nameMusic;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setNameMusic(String nameMusic) {
-        this.nameMusic = nameMusic;
+    public String getName() {
+        return name;
     }
 
-    public String getArtist() {
-        return artist;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setArtist(String artist) {
-        this.artist = artist;
+    public String getSinger() {
+        return singer;
     }
 
-    public String getKindMusic() {
-        return kindMusic;
+    public void setSinger(String singer) {
+        this.singer = singer;
     }
 
-    public void setKindMusic(String kindMusic) {
-        this.kindMusic = kindMusic;
+    public String getSongType() {
+        return songType;
     }
 
-    public String getFile() {
-        return file;
+    public void setSongType(String songType) {
+        this.songType = songType;
     }
 
-    public void setFile(String file) {
-        this.file = file;
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }
