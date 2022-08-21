@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7517ce76-9eeb-4a66-b689-953d71086fb3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/java/app_listen_music/configs/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/java/app_listen_music/configs/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/java/app_listen_music/model/Music.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/java/app_listen_music/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/java/app_listen_music/repository/IMusicRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/java/app_listen_music/repository/impl/MusicRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/java/app_listen_music/service/IMusicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/java/app_listen_music/service/impl/MusicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listen_music/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/product/configs/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/product/configs/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/manager_customer/src/main/java/customer/configs/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/manager_customer/src/main/java/customer/configs/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/manager_customer/src/main/java/customer/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/manager_customer/src/main/java/customer/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/manager_customer/src/main/java/customer/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/manager_customer/src/main/webapp/WEB-INF/views/hibernate.conf.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/build/classes/java/main/manager_product/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/build/classes/java/main/manager_product/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/build/classes/java/main/manager_product/repository/impl/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/build/classes/java/main/manager_product/repository/impl/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/build/classes/java/main/manager_product/service/impl/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/build/classes/java/main/manager_product/service/impl/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/build/libs/manager_product-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product/build/libs/manager_product-1.0-SNAPSHOT.war" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2DdtbdfhcIrAk08ZxKLmQZt4Yq4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../03_thymeleaf/exercise/manager_product" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\module4\05_CSDL_ORM\exercise\product_orm\src\main\java\product\configs" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7517ce76-9eeb-4a66-b689-953d71086fb3" name="Default Changelist" comment="" />
+      <created>1661040861966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661040861966</updated>
+      <workItem from="1661040867663" duration="941000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1661041712119">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1661041712119" />
+  </component>
+</project>
