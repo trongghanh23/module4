@@ -1,10 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="/js/bootstrap.js"></script>
+
 </head>
 <body>
-$END$
+<div class="p-3 mb-2 bg-primary text-white text-center">Danh Sách Blog</div>
+<nav th:replace="~{header :: nav}"></nav>
+<div class="container">
+    <div class="row main mt-2  ">
+
+        <table class="table table-striped">
+            </thead>
+            <tr>
+                <th>STT</th>
+                <th>Id</th>
+                <th>name</th>
+                <th>Content</th>
+                <th>Author</th>
+                <th colspan="3">action</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="blogObject,rowStat : ${blogList}">
+
+                <th scope="row" th:text="${rowStat.count}"></th>
+                <td th:text="${blogObject.getId()}"></td>
+                <td th:text="${blogObject.getName()}"></td>
+                <td th:text="${blogObject.getContent()}"></td>
+                <td th:text="${blogObject.getAuthor()}"></td>
+
+                <td><a th:href="@{/showUpdate(id=${blogObject.id})}">edit</a></td>
+                <td><a th:href="@{/detail(id=${blogObject.id})}">detail</a></td>
+                <td>
+                    <button th:attr="onclick=|infoDelete('${blogObject.id}','${blogObject.name}')|"
+                            class="btn btn-danger"
+                            type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form method="post" action="/delete">
+            <div class="modal-content">
+                <div class="modal-header btn-danger">
+                    <h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" hidden name="id" id="deleteId">
+                    <input type="text" hidden name="name" value="deletename">
+                    <span>Bạn có muốn xóa Blog: </span>
+                    <span id="nameDelete"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    function infoDelete(id, name) {
+        document.getElementById("deleteId").value = id;
+        document.getElementById("deleteName").value = name;
+    }
+</script>
 </body>
 </html>

@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
 <body>
-$END$
+<h3>Detail Blog</h3>
+<nav th:replace="~{header :: nav}"></nav>
+<div id="detail">
+    <div class="blog">
+        <label>Name Blog:</label>
+        <label th:text="${blog.name}"></label>
+    </div>
+    <div class="blog">
+        <label>Content</label>
+        <label th:text="${blog.content}"></label>
+    </div>
+
+</div>
+
+
 </body>
 </html>
