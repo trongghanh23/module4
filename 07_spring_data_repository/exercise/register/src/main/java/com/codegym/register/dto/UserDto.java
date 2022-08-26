@@ -1,15 +1,13 @@
 package com.codegym.register.dto;
 
+import com.codegym.register.common.DataTimeUtil;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import java.time.LocalDate;
-import java.time.Period;
 
 public class UserDto implements Validator {
 
@@ -93,17 +91,9 @@ public class UserDto implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         UserDto userDto = (UserDto) target;
-        try {
-            String age = userDto.getAge();
-            LocalDate localDate = LocalDate.parse(age);
-            int checkAge = Period.between(localDate, LocalDate.now()).getYears();
-            if (checkAge < 18) {
-                errors.rejectValue("age", "create.age", "tuổi phải lớn hơn 18 hoặc bằng 18");
-            }
-        } catch (Exception e) {
-            errors.rejectValue("age", "create.age", "Vui Lòng nhập vào không để trống");
-        }
+        DataTimeUtil.checkAge(userDto, errors);
 
 
     }
+
 }
