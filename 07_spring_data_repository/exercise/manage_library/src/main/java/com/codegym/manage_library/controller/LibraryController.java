@@ -69,4 +69,8 @@ public class LibraryController {
         this.iBookService.returnBook(bookCode);
         return "redirect:/library";
     }
+    @ExceptionHandler(value = Exception.class)
+    public String goError() {
+        return "error";
+    }
 }
