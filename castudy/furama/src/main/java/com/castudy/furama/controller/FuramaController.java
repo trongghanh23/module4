@@ -2,11 +2,10 @@ package com.castudy.furama.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
 @Controller
-public class Customer {
+public class FuramaController {
     @GetMapping("/")
     public String home(){
-        return ("/home");
+        return "/home";
     }
 }

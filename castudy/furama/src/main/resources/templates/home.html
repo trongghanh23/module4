@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <th:block th:replace="~{fragment :: css}"></th:block>
-
+<th:block th:replace="~{fragment::css}"></th:block>
 </head>
-<body  >
-<th:block th:replace="~{fragment:: header}"></th:block>
+<body>
+
+
+<nav th:replace="~{fragment::header}"></nav>
 
 <div class="container-fluid">
     <div class="row">
@@ -93,15 +95,31 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-6" >
+        <div class="col-lg-6">
             <div class="row"><h1> ROOMS & SUITES</h1></div>
-            <div class="row" style="text-align: justify" ><p>Representatives from the Culinary Beach Resort – Furama Da Nang and Ariyana Convention Centre participated in the tourism product introduction for Hue, Danang and Quang Nam to Singapore held at Pan Pacific Singapore, to connect domestic tourism companies with international travel agents. The event welcomed 31 members from 19 tour operators and distinctive tourism enterprises from these cities and provinces.
+            <div class="row" style="text-align: justify"><p>Representatives from the Culinary Beach Resort – Furama Da
+                Nang and Ariyana Convention Centre participated in the tourism product introduction for Hue, Danang and
+                Quang Nam to Singapore held at Pan Pacific Singapore, to connect domestic tourism companies with
+                international travel agents. The event welcomed 31 members from 19 tour operators and distinctive
+                tourism enterprises from these cities and provinces.
 
-                The Hue, Danang and Quang Nam tourism product introduction event took place on October 16th 2018, prior to ITB Asia – Singapore 2018 which was scheduled for October 17th, 18th and 19th, 2018. Singapore is one of the prime markets with high purchasing demands for Southeast Asian tourism.
+                The Hue, Danang and Quang Nam tourism product introduction event took place on October 16th 2018, prior
+                to ITB Asia – Singapore 2018 which was scheduled for October 17th, 18th and 19th, 2018. Singapore is one
+                of the prime markets with high purchasing demands for Southeast Asian tourism.
 
-                “This [program] is expected to evolve into an annual event, aims to connect Singapore to these 3 destinations; not only for demonstrating the products but also showing the willingness of domestic enterprises. We believe that the central Vietnam region will offer a variety of choices for customers. Moreover, our partners will make use of this opportunity to showcase the destination to other potential markets,” said Mr. Tran Chi Cuong, Deputy Director of Danang Tourism Department.
+                “This [program] is expected to evolve into an annual event, aims to connect Singapore to these 3
+                destinations; not only for demonstrating the products but also showing the willingness of domestic
+                enterprises. We believe that the central Vietnam region will offer a variety of choices for customers.
+                Moreover, our partners will make use of this opportunity to showcase the destination to other potential
+                markets,” said Mr. Tran Chi Cuong, Deputy Director of Danang Tourism Department.
 
-                According to Mr. Shankar Daniel, representative of Furama Resort Danang and Ariyana Convention Centre office in Singapore: “The Singapore market recognises that Furama Resort Danang and Ariyana Convention Centre have all the right ingredients for a successful conference, meeting and gala dinner, with the right infrastructure, space and size to accommodate all kind of events. MICE planners and companies want their qualifiers to bring back unforgettable memories and experiences, to share with their colleagues, family and friends to build their business opportunities. Furama Resort Danang and Ariyana Convention Centre has set the pace to become clients’ preferred choice.”
+                According to Mr. Shankar Daniel, representative of Furama Resort Danang and Ariyana Convention Centre
+                office in Singapore: “The Singapore market recognises that Furama Resort Danang and Ariyana Convention
+                Centre have all the right ingredients for a successful conference, meeting and gala dinner, with the
+                right infrastructure, space and size to accommodate all kind of events. MICE planners and companies want
+                their qualifiers to bring back unforgettable memories and experiences, to share with their colleagues,
+                family and friends to build their business opportunities. Furama Resort Danang and Ariyana Convention
+                Centre has set the pace to become clients’ preferred choice.”
 
             </p>
             </div>
@@ -124,10 +142,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-6">
-            <div class="card"style="width: 100%;height: 100%">
+            <div class="card" style="width: 100%;height: 100%">
                 <img src="https://media.sosanhnha.com/batdongsan/2022/07/19/1658195839-picturej4aq2.jpg"
                      class="card-img-top" alt="...">
-                <div class="card-body"  style="text-align: justify">
+                <div class="card-body" style="text-align: justify">
                     <p class="card-text"> Decorated with soft colors combined with decorative crafts bearing the breath
                         of local Champa culture,
                         the room is clearly divided into floors. Below is a living area with an L-shaped sofa and above
@@ -152,8 +170,8 @@
         </div>
     </div>
 </div>
-<th:block th:replace="~{fragment:: footer}"></th:block>
+<footer th:replace="~{fragment:: footer}"></footer>
 
 </body>
-<th:block th:replace="~{fragment :: js}"></th:block>
+<th:block th:replace="~{fragment::js}"></th:block>
 </html>
