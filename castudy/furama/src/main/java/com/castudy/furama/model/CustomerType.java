@@ -17,11 +17,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "custome_type")
+@Table(name = "customer_type")
 
 public class CustomerType {
     @Id
-    private Integer id;
+    private Integer code;
     private String name;
     @OneToMany(mappedBy = "customerType")
     private List<Customer> customerList;

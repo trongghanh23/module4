@@ -138,7 +138,7 @@
                 <td th:text="${customer.customerType.name}"></td>
 
 
-                <td><a th:href="@{/showUpdate(id=${customer.id})}" style="text-decoration: none;">edit</a></td>
+                <td><button type="button" class="btn btn-primary "><a th:href="@{/showUpdate(id=${customer.id})}" class="text-white " style=" text-decoration: none">edit</a></button></td>
 
 
                <td> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"

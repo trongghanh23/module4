@@ -23,7 +23,7 @@ public class CustomerController {
     private ICustomerTypeService iCustomerTypeService;
 
     @GetMapping("/customer")
-    public String customerList(Model model, @PageableDefault(size = 2) Pageable pageable,
+    public String customerList(Model model, @PageableDefault(size = 3) Pageable pageable,
                                @RequestParam Optional<String> keyword) {
         String keyWordValue = keyword.orElse("");
         model.addAttribute("customerList", this.iCustomerService.findAllSearchAndPaging(keyWordValue, pageable));

@@ -24,7 +24,7 @@ public class Customer {
     private Integer phoneNumber;
     private String email;
     private String address;
-    @JoinColumn(name = "customer_type",referencedColumnName = "id")
+    @JoinColumn(name = "customer_type",referencedColumnName = "code")
     @ManyToOne
     private CustomerType  customerType;
 }

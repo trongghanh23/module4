@@ -55,9 +55,9 @@
 
     </div>
     <div class="mb-3">
-        <select th:field="*{customerType.id}">
+        <select th:field="*{customerType.code}">
             <option th:each="customerType : ${customerTypeList}"
-                    th:value="${customerType.id}"
+                    th:value="${customerType.code}"
                     th:text="${customerType.name}">
 
             </option>
