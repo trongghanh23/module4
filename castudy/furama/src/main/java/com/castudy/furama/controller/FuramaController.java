@@ -8,4 +8,9 @@ public class FuramaController {
     public String home(){
         return "/home";
     }
+
+    @GetMapping("/home")
+    public String homes(){
+        return "/home";
+    }
 }

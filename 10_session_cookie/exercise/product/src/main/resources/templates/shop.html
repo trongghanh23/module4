@@ -29,14 +29,14 @@
             <td>quantity</td>
             <td>description</td>
             <td>img</td>
-            <td>detail</td>
+            <td>action</td>
             <!--            <th>Detail</th>-->
         </tr>
         </thead>
         <tbody>
         <tr th:each="product, loop : ${products}">
             <td th:text="${product.name}"></td>
-            <td th:text="${#strings.replace(#numbers.formatCurrency(product.price), '.00', '')}"></td>
+<!--            <td th:text="${#strings.replace(#numbers.formatCurrency(product.price), '.00', '')}"></td>-->
             <td th:text="${product.quantity}"></td>
             <td th:text="${product.description}"></td>
             <td><img th:src=" *{product.getImg()} " alt="" style="height: 80px; width: 80px"></td>

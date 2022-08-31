@@ -11,10 +11,15 @@ public class Cart {
 
     public Cart(Map<Product, Integer> products) {
         this.products = products;
+
     }
 
     public Map<Product, Integer> getProducts() {
         return products;
+    }
+
+    public void setProducts(Map<Product, Integer> products) {
+        this.products = products;
     }
 
     private boolean checkItemInCart(Product product) {

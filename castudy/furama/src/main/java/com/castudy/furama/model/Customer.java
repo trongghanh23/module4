@@ -1,9 +1,6 @@
 package com.castudy.furama.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,6 +9,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@ToString
 @Table(name = "customer")
 public class Customer {
     @Id
@@ -19,7 +17,7 @@ public class Customer {
     private Integer id;
     private String name;
     private String birthday;
-    private String gender;
+    private Boolean gender;
     private Integer idCard;
     private Integer phoneNumber;
     private String email;

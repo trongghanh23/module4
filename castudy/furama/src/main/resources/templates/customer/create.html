@@ -32,9 +32,11 @@
 
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Gender</label>
-                <input type="text" th:field="*{gender}" class="form-control" id="phone" aria-describedby="phone">
-
+                <label class="form-label">Gender </label>
+                <select th:field="*{idCard}" class="form-control" id="age" aria-describedby="age" >
+                    <option value="">Nữ</option>
+                    <option value="">nam</option>
+                </select>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">IdCard</label>

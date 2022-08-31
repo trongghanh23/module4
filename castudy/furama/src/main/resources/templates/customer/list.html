@@ -75,34 +75,35 @@
 <div class="container ">
     <div class="row main mt-2  ">
         <div class="container bg-info ">
-        <div class="row">
-            <div class="col-lg-4">
-                <a class="text-white" th:href="@{/customer/showCreate}" style="
-            text-decoration: none;" >
-                    Add new customer
-                </a>
+            <div class="row">
+                <div class="col-lg-4">
+                    <a class="text-white" th:href="@{/customer/showCreate}" style="
+            text-decoration: none;">
+                        Add new customer
+                    </a>
 
-            </div>
-            <div class="col-lg-4">
-                <h4>Danh Sách khách Hàng</h4>
-            </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Danh Sách khách Hàng</h4>
+                </div>
 
-            <div class="col-lg-4">
-                <form action="/customer">
-                    <div class="input-group mb-3">
-                        <input
-                                type="text"
-                                class="form-control"
-                                aria-describedby="button-addon2"
-                                name="keyword"
-                        />
-                        <button class="btn btn-outline-primary" type="submit" id="button-addon2" data-mdb-ripple-color="dark">
-                            Search
-                        </button>
-                    </div>
-                </form>
+                <div class="col-lg-4">
+                    <form action="/customer">
+                        <div class="input-group mb-3">
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-describedby="button-addon2"
+                                    name="keyword"
+                            />
+                            <button class="btn btn-outline-primary" type="submit" id="button-addon2"
+                                    data-mdb-ripple-color="dark">
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
         </div>
 
 
@@ -127,10 +128,12 @@
             <tr th:each="customer,loop : ${customerList}">
 
                 <th scope="row" th:text="${loop.count}"></th>
+
                 <td th:text="${customer.id}"></td>
                 <td th:text="${customer.name}"></td>
                 <td th:text="${customer.birthday}"></td>
-                <td th:text="${customer.gender}"></td>
+                <td th:if="${customer.gender}">Nam</td>
+                <td th:unless="${customer.gender}">Nữ</td>
                 <td th:text="${customer.idCard}"></td>
                 <td th:text="${customer.phoneNumber}"></td>
                 <td th:text="${customer.email}"></td>
@@ -138,16 +141,21 @@
                 <td th:text="${customer.customerType.name}"></td>
 
 
-                <td><button type="button" class="btn btn-primary "><a th:href="@{/showUpdate(id=${customer.id})}" class="text-white " style=" text-decoration: none">edit</a></button></td>
+                <td>
+                    <button type="button" class="btn btn-primary "><a th:href="@{/showUpdate(id=${customer.id})}"
+                                                                      class="text-white "
+                                                                      style=" text-decoration: none">edit</a></button>
+                </td>
 
 
-               <td> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                <td>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
 
                             th:attr="onclick=|showModalDelete('${customer.id}','${customer.name}')|">
 
-                  Delete
-               </button>
-               </td>
+                        Delete
+                    </button>
+                </td>
             </tr>
             </tbody>
         </table>
@@ -208,7 +216,7 @@
 <script>
     function showModalDelete(deleteModalValue, showModal) {
         document.getElementById("delete_modal").innerText = showModal;
-        document.getElementById("sendId").value = deleteModalValue ;
+        document.getElementById("sendId").value = deleteModalValue;
 
     }
 </script>
