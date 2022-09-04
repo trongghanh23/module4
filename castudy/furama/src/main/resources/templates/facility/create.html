@@ -5,12 +5,106 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <th:block th:replace="~{fragment::css}"></th:block>
-
 </head>
 <body>
-
 <nav th:replace="~{fragment::header}"></nav>
-<footer th:replace="~{fragment:: footer}"></footer>
+<div class="row">
+    <div class="col-3">
+
+    </div>
+    <div class="col-6">
+
+        <form th:action="@{/create/save/facility}" th:object="${showCreate}"
+              method="post">
+            <div class="mb-3">
+                <input type="hidden" th:field="*{id}" class="form-control" id="ids" aria-describedby="idUser">
+
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"> Name</label>
+                <input type="text" th:field="*{name}" class="form-control" id="lastName" aria-describedby="lastName">
+
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Area</label>
+                <input type="text" th:field="*{area}" class="form-control" id="firstName" aria-describedby="firstName">
+
+
+            </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Cost</label>
+                <input type="text" th:field="*{cost}" class="form-control" id="cost" aria-describedby="cost">
+
+
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Max People</label>
+                <input type="text" th:field="*{maxPeople}" class="form-control" id="age" aria-describedby="age">
+
+
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Standard Room</label>
+                <input type="text" th:field="*{standardRoom}" class="form-control" id="standardRoom" aria-describedby="standardRoom">
+
+
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Description </label>
+                <input type="text" th:field="*{description}" class="form-control" id="description" aria-describedby="description">
+
+
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Pool Area</label>
+                <input type="text" th:field="*{poolArea}" class="form-control" id="poolArea" aria-describedby="poolArea">
+
+
+            </div>
+
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Number Floors</label>
+                <input type="text" th:field="*{numberFloors}" class="form-control" id="exampleInputEmail1"
+                       aria-describedby="emailHelp">
+
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Facility Free</label>
+                <input type="text" th:field="*{facilityFree}" class="form-control" id="facilityFree" aria-describedby="facilityFree">
+
+            </div>
+            <div class="mb-3">
+                <select th:field="*{facilityType.typeId}">
+                    <option th:each="facility : ${showFacilityType}"
+                            th:value="${facility.typeId}"
+                            th:text="${facility.typeName}">
+
+                    </option>
+
+                </select>
+
+            </div>
+            <div class="mb-3">
+                <select th:field="*{rentType.rentTypeId}">
+                    <option th:each="rent : ${showRentType}"
+                            th:value="${rent.rentTypeId}"
+                            th:text="${rent.rentTypeName}">
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>
+
 
 </body>
 <th:block th:replace="~{fragment::js}"></th:block>
