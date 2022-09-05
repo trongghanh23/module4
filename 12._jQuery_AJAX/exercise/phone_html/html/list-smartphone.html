@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List phone</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<!-- Just an image -->
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://marketjoy.com/wp-content/uploads/2017/03/14045819341_6651d70343_b1.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Blogs
+        </a>
+    </div>
+</nav>
+<div class="container mt-4">
+    <div class="row w-50 mx-auto">
+        <div class="col-lg-10">
+            <input class="form-control" type="text" id="keyword">
+        </div>
+        <div class="col-lg-2">
+            <button class="btn btn-primary bg-momo" id="btnSearch">Search</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Create new phone</h1>
+        <div>
+            <span>Producer:</span>
+            <input class="form-control" id="producer">
+        </div>
+        <div>
+            Model:
+            <input class="form-control" id="model">
+        </div>
+        <div>
+            Price:
+            <input class="form-control" id="price">
+        </div>
+        <br>
+        <button class="btn" id="creatNewPhone">Create</button>
+    </div>
+
+    <div class="row w-50 mx-auto">
+        <div class="col-lg-12">
+            <h2>List Phone</h2>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Producer</th>
+                    <th scope="col" colspan="2">Action</th>
+                </tr>
+                </thead>
+                <tbody id="bodyPhone">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <nav aria-label="..." class="d-flex justify-content-center">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" id="aPrevious">Previous</a>
+            </li>
+            <li class="page-item disabled">
+                <a class="page-link" id="pageNumber">1/2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" id="aNext">Next</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/mdb.min.js"></script>
+<script>
+    function createNewSmartPhone(smartphoneObj) {
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "POST",
+            url: "http://localhost:8080/smart-phone/create",
+            data: JSON.stringify(smartphoneObj),
+            success: function (resultSuccess) {
+                console.log(resultSuccess);
+                alert("Thêm mới thành công")
+                getPagePhone(0);
+            },
+            error: function (resultError) {
+                alert("Thêm mới thất bại");
+            }
+        });
+    }
+    $("#creatNewPhone").click(function () {
+        let valProducer = $("#producer").val();
+        let valModel = $("#model").val();
+        let valPrice = $("#price").val();
+
+        let smartphoneObj = {
+            producer: valProducer,
+            model: valModel,
+            price: valPrice
+        };
+        console.log(smartphoneObj);
+        createNewSmartPhone(smartphoneObj);
+    })
+
+
+    function getPagePhone(pageNumber) {
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET",
+            url: "http://localhost:8080/smart-phone/list?page=" + pageNumber,
+            success: function (phonePage) {
+                // console.log(phonePage);
+                let phoneBodyHTML = "";
+
+                debugger
+                for (let i = 0; i < phonePage.content.length; i++) {
+                    phoneBodyHTML += `<tr>
+                        <td>${i}</td>
+                        <td>${phonePage.content[i].id}</td>
+                        <td>${phonePage.content[i].model}</td>
+                        <td>${phonePage.content[i].price}</td>
+                        <td>${phonePage.content[i].producer}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-mdb-toggle="modal"
+                                                            data-mdb-target="#exampleModalEdit${phonePage.content[i].id}">
+                                Edit
+                            </button>
+                            <!-- Modal -->
+                    <div class="modal fade" id="exampleModalEdit${phonePage.content[i].id}" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit SmartPhone</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <input type="hidden" class="form-control idEdit" value="${phonePage.content[i].id}">
+                    <label for="producer" class="form-label">Producer</label>
+                    <input type="text" class="form-control producerEdit${phonePage.content[i].id}" value="${phonePage.content[i].producer}">
+                    <label for="model" class="form-label">Model</label>
+                    <input type="text" class="form-control modelEdit${phonePage.content[i].id}" value="${phonePage.content[i].model}">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="text" class="form-control priceEdit${phonePage.content[i].id}" value="${phonePage.content[i].price}">
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                    <a href="${phonePage.content[i].id}" class="btn btn-primary btnEdit" data-mdb-dismiss="modal">Update</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </td>
+                    <td>
+                        <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-mdb-toggle="modal"
+                    data-mdb-target="#exampleModal${phonePage.content[i].id}">
+                    Delete
+                    </button>
+                        <!-- Modal -->
+                    <div class="modal fade" id="exampleModal${phonePage.content[i].id}" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete SmartPhone</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <p> Are U sure U want to delete model: ${phonePage.content[i].model} have
+                    id: ${phonePage.content[i].id}</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                    <a href="${phonePage.content[i].id}" class="btn btn-primary" id="btnDelete" data-mdb-dismiss="modal">Delete</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </td>
+                    </tr>`;
+                    }
+
+                $("#bodyPhone").html(phoneBodyHTML);
+            },
+            error: function (resultError) {
+                console.log('Co loi xay ra');
+            }
+        });
+    }
+
+    getPagePhone(0);
+
+    let pageCur = 0;
+
+    $("#aPrevious").click(function () {
+        if (pageCur > 0) {
+            pageCur--;
+            getPagePhone(pageCur);
+        } else {
+            alert("Not page previous");
+        }
+    });
+
+    $("#aNext").click(function () {
+        pageCur++;
+        getPagePhone(pageCur);
+    });
+
+
+    $(document).ready(function () {
+        $('#bodyPhone').on('click', '#btnDelete', function (event) {
+            //lay du lieu
+            let idSmartphone = $(this).attr("href");
+            // goi ajax
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: "DELETE",
+                //tên API
+                url: "http://localhost:8080/smart-phone/"+ idSmartphone,
+                //xử lý khi thành công
+                success: function (data) {
+                    $(this).parent().parent().remove();
+                    getPagePhone(0);
+                }
+            })
+            event.preventDefault();
+        });
+    })
+    $(document).ready(function () {
+        $("#bodyPhone").on("click", ".btnEdit", function (event) {
+            let idPhone = $(this).attr("href");
+            event.preventDefault();
+            let valProducer = $((".producerEdit"+idPhone)).val();
+            let valModel = $((".modelEdit"+idPhone)).val();
+            let valPrice = $((".priceEdit"+idPhone)).val();
+
+            console.log(idPhone," ",valProducer," ",valModel," ",valPrice);
+            let smartphoneObj = {
+                id: idPhone,
+                producer: valProducer,
+                model: valModel,
+                price: valPrice
+            };
+            console.log(smartphoneObj);
+            updateSmartPhone(smartphoneObj);
+        })
+    })
+    function updateSmartPhone(smartphoneObj) {
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "PUT",
+            url: "http://localhost:8080/smart-phone/update",
+            data: JSON.stringify(smartphoneObj),
+            success: function (resultSuccess) {
+                console.log(resultSuccess);
+                alert("Update successful")
+                getPagePhone(0);
+            },
+            error: function (resultError) {
+                alert("Update fail");
+            }
+        });
+    }
+
+
+</script>
+</body>
+</html>

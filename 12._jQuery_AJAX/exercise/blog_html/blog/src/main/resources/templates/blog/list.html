@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns: lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:replace="~{layout-css :: bootstrapCss}"></th:block>
+</head>
+<body>
+<header>
+    <div class="p-3 text-center bg-image"
+         style="height: 150px;">
+        <div class="mask">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-success">
+                    <h1 class="mb-3">My Blog</h1>
+                    <a href="" th:href="@{/create-blog}" class="btn btn-outline-success btn-lg" role="button">Create Blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <nav class="navbar navbar-light bg-info">
+            <div class="container-fluid">
+                <h5 class="navbar-brand">List Blogs : </h5>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" name="search"
+                           placeholder="Search By Name" th:value="${searchValue}" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" name="name">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="container mt-3">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Date Of Birth</th>
+            <th>Category</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="blog, loop : ${blogs}">
+            <td th:text="${loop.count}"></td>
+            <td th:text="${blog.id}"></td>
+            <td th:text="${blog.title}"></td>
+            <td th:text="${blog.content}"></td>
+            <td th:text="${blog.dateOfBirth}"></td>
+            <td th:if="${blog.category}" th:text="${blog.category.name}"></td>
+            <td th:unless="${blog.category}"></td>
+            <td>
+                <a th:href="@{/edit-blog/__${blog.id}__ }" class="btn btn-outline-success">Edit</a>
+            </td>
+            <td>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                        th:data-bs-target="'#staticBackdrop' + ${blog.id}">
+                    Delete
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" th:id="staticBackdrop + ${blog.id}" data-bs-backdrop="static"
+                     data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger" id="staticBackdropLabel">Warning!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Do you want delete blog <span th:text="${blog.title}" class="text-warning"></span>
+                                with id = <span th:text="${blog.id}" class="text-warning"></span> ?
+                            </div>
+                            <div class="modal-footer">
+                                <a href="" th:href="@{/delete-blog/{id}(id=${blog.id})}"
+                                   class="btn btn-outline-success">Delete</a>
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-10">
+            <a href="/category" class="btn btn-outline-success">Go To List Category</a>
+        </div>
+        <div class="col-2 ">
+            <ul class="pagination" th:if="${blogs.totalPages > 0}">
+                <li class="page-item">
+                    <a class="page-link" th:if="${blogs.hasPrevious()}" th:href="@{'/blog'(page=${blogs.number - 1}, search=${searchValue})}">
+                        Previous
+                    </a>
+                </li>
+                <div th:each="item, loop : ${#numbers.sequence(1, blogs.totalPages )}">
+                    <div th:if="${(blogs.number + 1) == item}">
+                        <li class="page-item active">
+                            <a class="page-link" href="#" th:text="${item}" th:href="@{/blog(page=(${item}-1), search=${searchValue})}"></a>
+                        </li>
+                    </div>
+                    <div th:unless="${((blogs.number + 1) == item)}">
+                        <li class="page-item">
+                            <a class="page-link" href="#" th:text="${item}" th:href="@{/blog(page=(${item}-1), search=${searchValue} )}"></a>
+                        </li>
+                    </div>
+                </div>
+                <li class="page-item">
+                    <a class="page-link" th:if="${blogs.hasNext()}" th:href="@{'/blog'(page=${blogs.number + 1}, search=${searchValue})}">
+                        Next
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<th:block th:replace="~{layout-css :: boostrapScript}"></th:block>
+</body>
+</html>
