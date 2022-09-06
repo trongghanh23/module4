@@ -26,7 +26,7 @@ public class BlogRestController {
     @Autowired
     private ICategoryService iCategoryService;
 
-    @GetMapping(value = "/blog-list")
+        @GetMapping(value = "/blog-list")
     public ResponseEntity<Page<Blog>> getPageBlog(
             @PageableDefault(value = 2) Pageable pageable) {
         Page<Blog> blogs = this.iBlogService.findAll(pageable);
