@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns: lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:replace="~{layout-css :: bootstrapCss}"></th:block>
+</head>
+<body>
+<div class="p-3 text-center bg-image"
+     style="height: 50px;">
+    <div class="mask">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-success">
+                <h1 class="mb-3">Update My Blog</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <form action="/edit-blog" method="post" th:object="${blog}">
+        <div class="mb-3 mt-3">
+            <input type="hidden" class="form-control" placeholder="id" th:field="*{id}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label class="form-label h6">Title:</label>
+            <input type="text" class="form-control" placeholder="Enter title" th:field="*{title}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label class="form-label h6">Content:</label>
+            <input type="text" class="form-control" placeholder="Enter Content" th:field="*{content}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label class="form-label h6">Day Of Birth::</label>
+            <input type="date" class="form-control" placeholder="Enter Day Of Birth:" th:field="*{dateOfBirth}">
+        </div>
+        <div class="mb-3 mt-3">
+            <label class="form-label h6">Select list (select one):</label>
+            <select class="form-select" th:field="*{category}">
+                <div th:each="item,loop : ${categoryList}" >
+                    <option th:text="${item.name}" th:value="${item.id}" selected></option>
+                </div>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-outline-success">Submit</button>
+        <a href="/blog" class="btn btn-outline-secondary">Back home</a>
+    </form>
+</div>
+</div>
+<th:block th:replace="~{layout-css :: boostrapScript}"></th:block>
+</body>
+</html>
