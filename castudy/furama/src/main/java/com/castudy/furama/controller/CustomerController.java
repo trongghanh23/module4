@@ -9,6 +9,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Optional;
 
@@ -36,14 +37,17 @@ public class CustomerController {
     }
 
     @PostMapping("/create/save")
-    public String save(@ModelAttribute Customer customer) {
+    public String save(@ModelAttribute Customer customer, RedirectAttributes redirectAttributes) {
         this.iCustomerService.save(customer);
+        redirectAttributes.addFlashAttribute("message",
+                "successfully add new");
         return "redirect:/customer";
     }
 
     @PostMapping("/delete")
-    public String delete(@RequestParam Integer id) {
+    public String delete(@RequestParam Integer id,RedirectAttributes redirectAttributes) {
         this.iCustomerService.delete(id);
+        redirectAttributes.addFlashAttribute("message","successfully delete");
         return "redirect:/customer";
     }
 
@@ -53,9 +57,22 @@ public class CustomerController {
 
         model.addAttribute("showCustomer", iCustomerService.getId(id));
         model.addAttribute("customerTypeList", iCustomerTypeService.findAll());
+
         return "/customer/edit";
+
     }
 
+    @PostMapping("/update/customer")
+    public String updateCustomer(@ModelAttribute Customer customer,
+                                 RedirectAttributes redirectAttributes){
+
+        this.iCustomerService.save(customer);
+
+        redirectAttributes.addFlashAttribute("message",
+                "successfully update");
+
+        return "redirect:/customer";
+    }
 @ExceptionHandler(value = Exception.class)
 public String goError() {
     return "error";

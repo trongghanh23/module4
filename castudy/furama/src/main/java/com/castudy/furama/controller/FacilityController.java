@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Optional;
 
@@ -43,14 +44,17 @@ public class FacilityController {
     }
 
     @PostMapping("/create/save/facility")
-    public String save(@ModelAttribute Facility facility) {
+    public String save(@ModelAttribute Facility facility, RedirectAttributes redirectAttributes) {
         this.iFacilityService.save(facility);
+        redirectAttributes.addFlashAttribute("message"," add new successfully! ");
         return "redirect:/facility";
     }
 
     @PostMapping("/delete/facility")
-    public String delete(@RequestParam Integer id) {
+    public String delete(@RequestParam Integer id,RedirectAttributes redirectAttributes) {
         this.iFacilityService.delete(id);
+        redirectAttributes.addFlashAttribute("message"," Delete successfully! ");
+
         return "redirect:/facility";
     }
 
@@ -62,6 +66,12 @@ public class FacilityController {
         model.addAttribute("facilityTypeList", iFacilityTypeService.findAll());
         model.addAttribute("RentTypeList", iRentTypeService.findAll());
         return "/facility/edit";
+    }
+    @PostMapping("/update/facility")
+    public String updateFacility(@ModelAttribute Facility facility,RedirectAttributes redirectAttributes){
+        this.iFacilityService.save(facility);
+        redirectAttributes.addFlashAttribute("message", "update successfully!");
+        return "redirect:/facility";
     }
 
 }

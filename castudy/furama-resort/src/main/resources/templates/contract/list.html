@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{fragment::css}"></th:block>
+
+
+</head>
+
+<body>
+<nav th:replace="~{fragment::header}"></nav>
+
+<div class="container-fluid">
+    <div class="col-lg-12 gradient-header">
+        <div style="text-align: center">
+            <h3>List Contract</h3>
+        </div>
+        <div style="text-align: end" th:if="${success}">
+            <b style="color: red" th:text="${success}"></b>
+        </div>
+        <table class="table table-striped table-hover mt-2">
+            <tr>
+                <th>STT</th>
+                <th>Service</th>
+                <th>Customer</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Deposit</th>
+                <th>Total Money</th>
+                <th colspan="2">Attach Facility</th>
+            </tr>
+
+            <tr th:each="row, number : ${contracts}">
+                <td th:text="${number.count}"></td>
+                <td th:text="${row.facilities.name}"></td>
+                <td th:text="${row.customers.name}"></td>
+                <td th:text="${row.startDate}"></td>
+                <td th:text="${row.endDate}"></td>
+                <td th:text="${row.deposit}"></td>
+                <td></td>
+                <td>
+                    <a type="button" class="btn" th:href="@{/contract/create}">
+                        <img src="https://cdn-icons.flaticon.com/png/512/1550/premium/1550598.png?token=exp=1659608134~hmac=8c47d172118df42573f1e8d264367572"
+                             alt="" width="30px" height="30px">
+                    </a>
+                </td>
+                <td>
+                    <button type="button" class="btn" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" onclick="infoDelete(this.value)">
+                        <img src="https://cdn-icons.flaticon.com/png/512/6061/premium/6061395.png?token=exp=1659622313~hmac=6929bb7a93229087bd9471714b447048"
+                             alt="" width="30px" height="30px">
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+        <div style="text-align: right">
+            <a th:href="@{'/contract'(page = ${contracts.number - 1}, nameFind = ${nameFind})}"
+               th:if="${contracts.hasPrevious()}"
+               class="btn me-3">
+                <img src="https://cdn-icons-png.flaticon.com/512/5542/5542065.png" alt="" width="30px" height="30px">
+            </a>
+            <span th:text="${contracts.number + 1}"></span> /
+            <span th:text="${contracts.totalPages}"></span>
+            <a th:href="@{'/contract'(page = ${contracts.number + 1}, nameFind = ${nameFind})}"
+               th:if="${contracts.hasNext()}"
+               class="btn ms-3">
+                <img src="https://cdn-icons-png.flaticon.com/512/5542/5542086.png" alt="" width="30px" height="30px">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Create -->
+<form th:action="@{/contract/create}" method="post" th:object="${contractCreate}">
+    <div class="modal fade" id="exampleModalCreate" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelCreate">Create New Contract</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="display: grid">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Start Date</span>
+                                    <input type="date" class="form-control" required th:field="*{startDate}">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">End Date</span>
+                                    <input type="date" class="form-control" required th:field="*{endDate}">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Deposit</span>
+                                    <input type="text" class="form-control" required th:field="*{deposit}">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Total Money</span>
+                                    <input type="text" readonly class="form-control" required>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Customer</span>
+                                    <label style="width: 100%">
+                                        <select class="form-select" th:field="*{customers}">
+                                            <option th:each="item : ${customers}" th:value="${item.id}"
+                                                    th:text="${item.name}"></option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Facility</span>
+                                    <label style="width: 100%">
+                                        <select class="form-select" th:field="*{facilities}">
+                                            <option th:each="item : ${facilities}" th:value="${item.id}"
+                                                    th:text="${item.name}"></option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <img src="https://cdn-icons.flaticon.com/png/512/1550/premium/1550598.png?token=exp=1659608134~hmac=8c47d172118df42573f1e8d264367572"
+                                         alt="" width="30px" height="30px">
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">
+                        <img src="https://cdn-icons.flaticon.com/png/512/1550/premium/1550599.png?token=exp=1659608231~hmac=34fc27f117472e8ccd1dfd17696a088e"
+                             alt="" width="30px" height="30px">
+                    </button>
+                    <button type="submit" class="btn" value="Create">
+                        <img src="https://cdn-icons.flaticon.com/png/512/1550/premium/1550598.png?token=exp=1659608134~hmac=8c47d172118df42573f1e8d264367572"
+                             alt="" width="30px" height="30px">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Modal List -->
+<form th:action="@{/contract}" method="get">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">...</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">
+                        <img src="https://cdn-icons.flaticon.com/png/512/1550/premium/1550599.png?token=exp=1659608231~hmac=34fc27f117472e8ccd1dfd17696a088e"
+                             alt="" width="30px" height="30px">
+                    </button>
+                    <button type="submit" class="btn" value="Delete">
+                        <img src="https://cdn-icons-png.flaticon.com/512/7951/7951990.png" alt="" width="30px"
+                             height="30px">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<footer th:replace="~{home :: #footer}"></footer>
+<div th:replace="~{home :: css2}"></div>
+</body>
+</html>>

@@ -14,13 +14,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@ToString
-@Table(name = "customer_type")
+@Table(name = "customerType")
 
 public class CustomerType {
     @Id
     private Integer code;
     private String name;
+
     @OneToMany(mappedBy = "customerType")
     private List<Customer> customerList;
 }

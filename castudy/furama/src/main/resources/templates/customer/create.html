@@ -3,11 +3,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Customer Create</title>
     <th:block th:replace="~{fragment::css}"></th:block>
 </head>
 <body>
 <nav th:replace="~{fragment::header}"></nav>
+
+<div class="next" th:replace="~{fragment::color}"></div>
+<div class="container ">
+    <div class="row text-center"><h3>Customer Create </h3></div>
+
 <div class="row">
     <div class="col-3">
 
@@ -17,7 +22,7 @@
         <form th:action="@{/create/save}" th:object="${showCreate}"
               method="post">
             <div class="mb-3">
-                <input type="hidden" th:field="*{id}" class="form-control" id="ids" aria-describedby="idUser">
+                <input type="hidden" th:field="*{customerId}" class="form-control" id="ids" aria-describedby="idUser">
 
             </div>
             <div class="mb-3">
@@ -33,9 +38,9 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Gender </label>
-                <select th:field="*{idCard}" class="form-control" id="age" aria-describedby="age" >
-                    <option value="">Nữ</option>
-                    <option value="">nam</option>
+                <select th:field="*{idCard}" class="form-control" id="gender" aria-describedby="age" >
+                    <option value="">Female</option>
+                    <option value="">Male</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -75,12 +80,21 @@
 
             </div>
 
-            <button type="submit" class="btn btn-primary">Save</button>
+
+            <div class="row" >
+                <div class="col-9">
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+                <div class="col-3">
+                    <a class="text-white btn btn-primary" href="/customer" style=" text-decoration: none">Back </a>
+                </div>
+            </div>
         </form>
     </div>
     <div class="col-3"></div>
 </div>
-
+</div>
 
 </body>
 <th:block th:replace="~{fragment::js}"></th:block>

@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,7 +17,7 @@ import javax.persistence.*;
 public class Facility {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer facilityId;
     private String name;
     private double area;
     private double cost;
@@ -26,10 +27,15 @@ public class Facility {
     private double poolArea;
     private int numberFloors;
     private String facilityFree;
-    @JoinColumn(name = "facility_type",referencedColumnName = "typeId")
+
+    @JoinColumn(name = "facilityType",referencedColumnName = "typeId")
     @ManyToOne
     private FacilityType  facilityType;
-    @JoinColumn(name = "rent_type",referencedColumnName = "rentTypeId")
+
+    @JoinColumn(name = "rentType",referencedColumnName = "rentTypeId")
     @ManyToOne
     private RentType rentType;
+//
+//    @OneToMany(mappedBy = "facility")
+//    List<Contract>contractList;
 }

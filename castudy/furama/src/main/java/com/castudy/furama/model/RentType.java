@@ -16,7 +16,7 @@ import java.util.List;
 @Setter
 @Getter
 @Entity
-@Table(name = "rent_type")
+@Table(name = "rentType")
 public class RentType {
     @Id
     private Integer rentTypeId;
