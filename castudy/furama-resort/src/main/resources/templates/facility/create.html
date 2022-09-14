@@ -17,7 +17,7 @@
 
         </div>
         <div class="col-6">
-            <form th:action="@{/create/save/facility}" th:object="${showCreate}"
+            <form th:action="@{/create/save/facility}" th:object="${facilityDto}"
                   method="post">
                 <div class="mb-3">
                     <input type="hidden" th:field="*{facilityId}" class="form-control" id="ids" aria-describedby="idUser">
@@ -42,12 +42,13 @@
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Area</label>
                     <input type="text" th:field="*{area}" class="form-control" id="firstName" aria-describedby="firstName">
-
+                    <div class="mb-4 text-danger" th:errors="*{area}"></div>
 
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Cost</label>
                     <input type="text" th:field="*{cost}" class="form-control" id="cost" aria-describedby="cost">
+                    <div class="mb-4 text-danger" th:errors="*{cost}"></div>
 
 
                 </div>
@@ -55,12 +56,14 @@
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Max People</label>
                     <input type="text" th:field="*{maxPeople}" class="form-control" id="age" aria-describedby="age">
+                    <div class="mb-4 text-danger" th:errors="*{maxPeople}"></div>
 
 
                 </div>
                 <div class="mb-3" id="standard_room">
                     <label for="exampleInputEmail1" class="form-label">Standard Room</label>
                     <input type="text" th:field="*{standardRoom}" class="form-control" id="standardRoom" aria-describedby="standardRoom">
+                    <div class="mb-4 text-danger" th:errors="*{standardRoom}"></div>
 
 
                 </div>
@@ -68,12 +71,14 @@
                 <div class="mb-3" id="description">
                     <label for="exampleInputEmail1" class="form-label">Description </label>
                     <input type="text" th:field="*{description}" class="form-control" id="descriptions" aria-describedby="description">
+                    <div class="mb-4 text-danger" th:errors="*{description}"></div>
 
 
                 </div>
                 <div class="mb-3" id="pool_area">
                     <label for="exampleInputEmail1" class="form-label">Pool Area</label>
                     <input type="text" th:field="*{poolArea}" class="form-control" id="poolArea" aria-describedby="poolArea">
+                    <div class="mb-4 text-danger" th:errors="*{poolArea}"></div>
 
 
                 </div>
@@ -83,6 +88,7 @@
                     <label for="exampleInputEmail1" class="form-label">Number Floors</label>
                     <input type="text" th:field="*{numberFloors}" class="form-control" id="exampleInputEmail1"
                            aria-describedby="emailHelp">
+                    <div class="mb-4 text-danger" th:errors="*{numberFloors}"></div>
 
                 </div>
                 <div class="mb-3" id="facility_free">

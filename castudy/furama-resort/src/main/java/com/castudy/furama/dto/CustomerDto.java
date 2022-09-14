@@ -1,40 +1,36 @@
 package com.castudy.furama.dto;
 
 
+import com.castudy.furama.common.customer.CustomerValidate;
 import com.castudy.furama.model.CustomerType;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
-import javax.validation.constraints.Pattern;
 
-public class CustomerDto  {
+public class CustomerDto implements Validator {
 
     private Integer customerId;
 
-
-    @NotBlank(message = "please! input ")
-    @Pattern(regexp = "[A-Za-z ]+", message = "No input number.please! input Abc-Bxy")
     private String name;
-    @NotBlank(message = "please! input ")
+
     private String birthday;
     private Boolean gender;
-    @Pattern(regexp = "^\\d{9}|\\d{12}$", message = "Id Card Must Have 9 / 12 number !")
-    private Integer idCard;
-    @Pattern(regexp = "^(090|091|8490|8491)+(\\d{7})$", message = "Phone Must Be Incorrect Format !")
-    private Integer phoneNumber;
 
-    @NotBlank(message = "please! input ")
+    private String idCard;
+    private String phoneNumber;
+    @NotBlank(message = "Please enter !")
     @Email
     private String email;
-    @NotBlank(message = "please! input ")
     private String address;
     private CustomerType customerType;
 
     public CustomerDto() {
     }
 
-    public CustomerDto(Integer customerId, String name, String birthday, Boolean gender, Integer idCard, Integer phoneNumber, String email, String address, CustomerType customerType) {
+    public CustomerDto(Integer customerId, String name, String birthday, Boolean gender, String idCard, String phoneNumber, String email, String address, CustomerType customerType) {
         this.customerId = customerId;
         this.name = name;
         this.birthday = birthday;
@@ -78,19 +74,19 @@ public class CustomerDto  {
         this.gender = gender;
     }
 
-    public Integer getIdCard() {
+    public String getIdCard() {
         return idCard;
     }
 
-    public void setIdCard(Integer idCard) {
+    public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
 
-    public Integer getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -118,5 +114,19 @@ public class CustomerDto  {
         this.customerType = customerType;
     }
 
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
+    }
 
+    @Override
+    public void validate(Object target, Errors errors) {
+        CustomerDto customerDto = (CustomerDto) target;
+
+        CustomerValidate.checkName(customerDto, errors);
+        CustomerValidate.checkAddress(customerDto, errors);
+        CustomerValidate.checkIdCard(customerDto, errors);
+        CustomerValidate.checkPhoneNumber(customerDto, errors);
+        CustomerValidate.checkAge(customerDto, errors);
+    }
 }

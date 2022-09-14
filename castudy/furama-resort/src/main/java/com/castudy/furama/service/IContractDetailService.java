@@ -6,6 +6,5 @@ import java.util.List;
 
 public interface IContractDetailService {
     List<ContractDetail> findAll();
-
-    ContractDetail save(ContractDetail contractDetail);
+//    List<ContractDetail> findAllByContractId(Integer id);
 }

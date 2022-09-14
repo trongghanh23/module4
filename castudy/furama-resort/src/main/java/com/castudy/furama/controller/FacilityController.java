@@ -1,5 +1,6 @@
 package com.castudy.furama.controller;
 
+import com.castudy.furama.dto.CustomerDto;
 import com.castudy.furama.dto.FacilityDto;
 import com.castudy.furama.model.*;
 import com.castudy.furama.service.IFacilityService;
@@ -23,11 +24,11 @@ import java.util.Optional;
 
 @Controller
 public class FacilityController {
-  @Autowired
+    @Autowired
     private IFacilityService iFacilityService;
-  @Autowired
+    @Autowired
     private IFacilityTypeService iFacilityTypeService;
-  @Autowired
+    @Autowired
     private IRentTypeService iRentTypeService;
 
     @GetMapping("/facility")
@@ -41,16 +42,16 @@ public class FacilityController {
 
     @GetMapping("/facility/showCreate")
     public String showCreate(Model model) {
-        model.addAttribute("showCreate", new Facility());
+        model.addAttribute("facilityDto", new FacilityDto());
         model.addAttribute("showFacilityType", this.iFacilityTypeService.findAll());
         model.addAttribute("showRentType", this.iRentTypeService.findAll());
         return ("/facility/create");
     }
 
     @PostMapping("/create/save/facility")
-    public String save(@ModelAttribute("showCreate") @Valid FacilityDto facilityDto, BindingResult bindingResult, RedirectAttributes redirectAttributes,Model model) {
-        new  FacilityDto().validate(facilityDto,bindingResult);
-        if (bindingResult.hasErrors()){
+    public String save(@ModelAttribute @Valid FacilityDto facilityDto, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
+        new FacilityDto().validate(facilityDto, bindingResult);
+        if (bindingResult.hasErrors()) {
             model.addAttribute("showFacilityType", this.iFacilityTypeService.findAll());
             model.addAttribute("showRentType", this.iRentTypeService.findAll());
             return ("/facility/create");
@@ -61,23 +62,22 @@ public class FacilityController {
 
         FacilityType facilityType = new FacilityType();
         facilityType.setTypeId(facilityDto.getFacilityType().getTypeId());
-
-         RentType rentType = new RentType();
-        rentType.setRentTypeId(facilityDto.getRentType().getRentTypeId());
-
         facility.setFacilityType(facilityType);
+
+        RentType rentType = new RentType();
+        rentType.setRentTypeId(facilityDto.getRentType().getRentTypeId());
+        facility.setRentType(rentType);
+
         this.iFacilityService.save(facility);
 
-        facility.setRentType(rentType);
-        this.iFacilityService.save(facility);
-        redirectAttributes.addFlashAttribute("message"," add new successfully! ");
+        redirectAttributes.addFlashAttribute("message", " add new successfully! ");
         return "redirect:/facility";
     }
 
     @PostMapping("/delete/facility")
-    public String delete(@RequestParam Integer id,RedirectAttributes redirectAttributes) {
+    public String delete(@RequestParam Integer id, RedirectAttributes redirectAttributes) {
         this.iFacilityService.delete(id);
-        redirectAttributes.addFlashAttribute("message"," Delete successfully! ");
+        redirectAttributes.addFlashAttribute("message", " Delete successfully! ");
 
         return "redirect:/facility";
     }
@@ -86,13 +86,28 @@ public class FacilityController {
     public String showEditFacility(@RequestParam Integer id, Model model) {
 
 
-        model.addAttribute("showFacility", iFacilityService.getId(id));
-        model.addAttribute("facilityTypeList", iFacilityTypeService.findAll());
-        model.addAttribute("RentTypeList", iRentTypeService.findAll());
+        model.addAttribute("facilityUpdate", iFacilityService.getId(id));
+        model.addAttribute("showFacilityType", iFacilityTypeService.findAll());
+        model.addAttribute("showRentType", iRentTypeService.findAll());
         return "/facility/edit";
     }
+
     @PostMapping("/update/facility")
-    public String updateFacility(@ModelAttribute Facility facility,RedirectAttributes redirectAttributes){
+    public String updateFacility(@ModelAttribute  @Valid FacilityDto facilityDto,BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+
+            new FacilityDto().validate(facilityDto, bindingResult);
+            if (bindingResult.hasErrors()) {
+                return "/facility/edit";
+            }
+            Facility facility = new Facility();
+            BeanUtils.copyProperties(facilityDto, facility);
+
+            FacilityType facilityType = new FacilityType();
+            BeanUtils.copyProperties(facilityDto, facilityType);
+
+            RentType rentType =new RentType();
+            BeanUtils.copyProperties(facilityDto,rentType);
+
         this.iFacilityService.save(facility);
         redirectAttributes.addFlashAttribute("message", "update successfully!");
         return "redirect:/facility";

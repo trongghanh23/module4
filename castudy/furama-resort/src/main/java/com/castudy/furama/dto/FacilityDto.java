@@ -1,25 +1,26 @@
 package com.castudy.furama.dto;
 
+import com.castudy.furama.common.facility.FacilityValidate;
+import com.castudy.furama.model.Facility;
 import com.castudy.furama.model.FacilityType;
 import com.castudy.furama.model.RentType;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
+
+
+
 
 public class FacilityDto implements Validator {
     private Integer facilityId;
-    @NotBlank(message = "please! input ")
-    @Pattern(regexp = "[A-Za-z ]+", message = "No input number.please! input Abc-Bxy")
     private String name;
-    private double area;
-    private double cost;
-    private int maxPeople;
+    private Double area;
+    private Double cost;
+    private Integer maxPeople;
     private String standardRoom;
     private String description;
-    private double poolArea;
-    private int numberFloors;
+    private Double poolArea;
+    private Integer numberFloors;
     private String facilityFree;
     private FacilityType facilityType;
     private RentType rentType;
@@ -27,8 +28,7 @@ public class FacilityDto implements Validator {
     public FacilityDto() {
     }
 
-    public FacilityDto(Integer facilityId, String name, double area, double cost, int maxPeople, String standardRoom, String description, double poolArea, int numberFloors, String facilityFree, FacilityType facilityType, RentType rentType) {
-
+    public FacilityDto(Integer facilityId, String name, Double area, Double cost, Integer maxPeople, String standardRoom, String description, Double poolArea, Integer numberFloors, String facilityFree, FacilityType facilityType, RentType rentType) {
         this.facilityId = facilityId;
         this.name = name;
         this.area = area;
@@ -59,27 +59,27 @@ public class FacilityDto implements Validator {
         this.name = name;
     }
 
-    public double getArea() {
+    public Double getArea() {
         return area;
     }
 
-    public void setArea(double area) {
+    public void setArea(Double area) {
         this.area = area;
     }
 
-    public double getCost() {
+    public Double getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
+    public void setCost(Double cost) {
         this.cost = cost;
     }
 
-    public int getMaxPeople() {
+    public Integer getMaxPeople() {
         return maxPeople;
     }
 
-    public void setMaxPeople(int maxPeople) {
+    public void setMaxPeople(Integer maxPeople) {
         this.maxPeople = maxPeople;
     }
 
@@ -99,19 +99,19 @@ public class FacilityDto implements Validator {
         this.description = description;
     }
 
-    public double getPoolArea() {
+    public Double getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(double poolArea) {
+    public void setPoolArea(Double poolArea) {
         this.poolArea = poolArea;
     }
 
-    public int getNumberFloors() {
+    public Integer getNumberFloors() {
         return numberFloors;
     }
 
-    public void setNumberFloors(int numberFloors) {
+    public void setNumberFloors(Integer numberFloors) {
         this.numberFloors = numberFloors;
     }
 
@@ -143,9 +143,15 @@ public class FacilityDto implements Validator {
     public boolean supports(Class<?> clazz) {
         return false;
     }
-
     @Override
     public void validate(Object target, Errors errors) {
+        FacilityDto facilityDto = (FacilityDto) target;
 
+        FacilityValidate.checkName(facilityDto, errors);
+        FacilityValidate.checkArea(facilityDto,errors);
+        FacilityValidate.checkCost(facilityDto,errors);
+        FacilityValidate.checkMaxPeople(facilityDto,errors);
+        FacilityValidate.checkPoolArea(facilityDto,errors);
+        FacilityValidate.checkFloors(facilityDto,errors);
     }
 }

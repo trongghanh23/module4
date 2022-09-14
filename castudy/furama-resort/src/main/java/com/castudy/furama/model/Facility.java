@@ -1,10 +1,5 @@
 package com.castudy.furama.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -16,13 +11,13 @@ public class Facility {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer facilityId;
     private String name;
-    private double area;
-    private double cost;
-    private int maxPeople;
+    private Double area;
+    private Double cost;
+    private Integer maxPeople;
     private String standardRoom;
     private String description;
-    private double poolArea;
-    private int numberFloors;
+    private Double poolArea;
+    private Integer numberFloors;
     private String facilityFree;
 
     @JoinColumn(name = "facilityType",referencedColumnName = "typeId")
@@ -72,27 +67,27 @@ public class Facility {
         this.name = name;
     }
 
-    public double getArea() {
+    public Double getArea() {
         return area;
     }
 
-    public void setArea(double area) {
+    public void setArea(Double area) {
         this.area = area;
     }
 
-    public double getCost() {
+    public Double getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
+    public void setCost(Double cost) {
         this.cost = cost;
     }
 
-    public int getMaxPeople() {
+    public Integer getMaxPeople() {
         return maxPeople;
     }
 
-    public void setMaxPeople(int maxPeople) {
+    public void setMaxPeople(Integer maxPeople) {
         this.maxPeople = maxPeople;
     }
 
@@ -112,19 +107,19 @@ public class Facility {
         this.description = description;
     }
 
-    public double getPoolArea() {
+    public Double getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(double poolArea) {
+    public void setPoolArea(Double poolArea) {
         this.poolArea = poolArea;
     }
 
-    public int getNumberFloors() {
+    public Integer getNumberFloors() {
         return numberFloors;
     }
 
-    public void setNumberFloors(int numberFloors) {
+    public void setNumberFloors(Integer numberFloors) {
         this.numberFloors = numberFloors;
     }
 
